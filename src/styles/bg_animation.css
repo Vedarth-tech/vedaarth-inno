@@ -1,0 +1,118 @@
+.home-page {
+    background-color: #fff;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.quote {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* margin-bottom: 1rem; */
+}
+
+.by {
+    font-size: 1.2rem;
+    /* font-style: italic; */
+    opacity: 0.85;
+    /* margin-bottom: 1rem; */
+}
+
+/* Optional: Add some fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.content .btn {
+    background: linear-gradient(135deg, #0066ff, #00ccff);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.content .btn:hover {
+    background: linear-gradient(135deg, #0052cc, #0099cc);
+    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.content .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 102, 255, 0.3);
+}
+
+.blob-outer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+    /*opacity: 0.5;*/
+}
+
+.blob-inner-container {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1000px;
+    overflow: hidden;
+    background-color: #fff;
+    transform: scale(0.8);
+}
+
+.blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: conic-gradient(from 0deg, #08f, #f60, #bbffa1, #4c00ff, #ab2666, #09f);
+    animation: spinBlob 10s linear infinite;
+}
+
+@keyframes spinBlob {
+    0% {
+        transform: rotate(0deg) scale(2);
+    }
+
+    100% {
+        transform: rotate(1turn) scale(2);
+    }
+}
+
+/* Shadow with slight blur */
+.custom-shadow {
+    box-shadow: rgba(0, 0, 0, 0.2) -10px -8px 50px;
+}
